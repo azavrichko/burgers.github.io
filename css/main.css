@@ -309,31 +309,31 @@ template {
 
 @font-face {
   font-family: 'Gagalin-Regular';
-  src: url("../../fonts/gagalin-regular-webfont.woff") format("woff");
+  src: url("../fonts/gagalin-regular-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal; }
 
 @font-face {
   font-family: 'Lifehack-Medium';
-  src: url("../../fonts/lifehack_medium-webfont.woff") format("woff");
+  src: url("../fonts/lifehack_medium-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal; }
 
 @font-face {
   font-family: 'Ubuntu';
-  src: url("../../fonts/ubuntu-light-webfont.woff") format("woff");
+  src: url("../fonts/ubuntu-light-webfont.woff") format("woff");
   font-weight: 300;
   font-style: normal; }
 
 @font-face {
   font-family: 'Ubuntu';
-  src: url("../../fonts/ubuntu-medium-webfont.woff") format("woff");
+  src: url("../fonts/ubuntu-medium-webfont.woff") format("woff");
   font-weight: 500;
   font-style: normal; }
 
 @font-face {
   font-family: 'Ubuntu';
-  src: url("../../fonts/ubuntu-b-webfont.woff") format("woff");
+  src: url("../fonts/ubuntu-b-webfont.woff") format("woff");
   font-weight: bold;
   font-style: normal; }
 
@@ -422,7 +422,7 @@ button {
     justify-content: flex-start; }
 
 .hero {
-  background: url("../../img/bg/hero-bg.jpg") center center/cover no-repeat;
+  background: url("../img/bg/hero-bg.jpg") center center/cover no-repeat;
   position: relative; }
 
 .hero__container {
@@ -531,7 +531,7 @@ button {
 .scroll-down-btn {
   width: 29px;
   height: 14px;
-  background: url("../../img/icons/arrow-scroll.svg") center center/contain no-repeat;
+  background: url("../img/icons/arrow-scroll.svg") center center/contain no-repeat;
   display: block;
   position: absolute;
   bottom: 20px;
@@ -541,7 +541,7 @@ button {
   transform: translate(-50%); }
 
 .best {
-  background: url("../../img/bg/best.jpg") center center/cover no-repeat; }
+  background: url("../img/bg/best.jpg") center center/cover no-repeat; }
 
 .best__list {
   display: -webkit-box;
@@ -623,7 +623,7 @@ button {
   background-color: #2f3234; }
 
 .order {
-  background: url("../../img/bg/order.jpg") center center/cover no-repeat;
+  background: url("../img/bg/order.jpg") center center/cover no-repeat;
   color: #fff; }
 
 .form__elem {
