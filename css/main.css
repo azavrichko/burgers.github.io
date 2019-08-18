@@ -449,7 +449,7 @@ button {
   line-height: 1;
   font-family: 'Lifehack-Medium'; }
 
-.hero__content-img {
+.hero__content-picture {
   max-width: 100%; }
 
 .header {
@@ -474,6 +474,9 @@ button {
   font-family: 'Ubuntu', Helvetica, sans-serif;
   font-weight: 300;
   font-weight: 500; }
+
+.logo__container {
+  max-width: 100%; }
 
 .nav {
   margin-right: 15px; }
