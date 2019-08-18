@@ -574,6 +574,11 @@ button {
   font-family: 'Lifehack-Medium';
   margin-bottom: 33px; }
 
+.best__desc-text {
+  font-family: 'Ubuntu', Helvetica, sans-serif;
+  font-weight: 300;
+  font-size: 14px; }
+
 .best__picture-icon {
   max-width: 100%; }
 

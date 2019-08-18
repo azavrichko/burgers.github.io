@@ -25,6 +25,10 @@
   @include lifehack();
   margin-bottom: 33px;
 }
+.best__desc-text {
+  @include ubuntu;
+  font-size: 14px;
+}
 
 .best__picture-icon {
   max-width: 100%;
