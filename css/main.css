@@ -342,7 +342,7 @@ body {
   height: 100%; }
 
 body {
-  font-style: 16px;
+  font-size: 16px;
   line-height: 1.42;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -449,6 +449,9 @@ button {
   line-height: 1;
   font-family: 'Lifehack-Medium'; }
 
+.hero__content-img {
+  max-width: 100%; }
+
 .header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -467,7 +470,10 @@ button {
   display: flex;
   -webkit-box-align: center;
   -ms-flex-align: center;
-  align-items: center; }
+  align-items: center;
+  font-family: 'Ubuntu', Helvetica, sans-serif;
+  font-weight: 300;
+  font-weight: 500; }
 
 .nav {
   margin-right: 15px; }
@@ -502,6 +508,9 @@ button {
       display: none; }
 
 .nav__link {
+  font-family: 'Ubuntu', Helvetica, sans-serif;
+  font-weight: 300;
+  font-weight: 500;
   text-decoration: none;
   color: #fff;
   font-size: 13px;
@@ -565,6 +574,9 @@ button {
   font-family: 'Lifehack-Medium';
   margin-bottom: 33px; }
 
+.best__picture-icon {
+  max-width: 100%; }
+
 .reviews__list {
   height: 100%;
   display: -webkit-box;
@@ -617,7 +629,8 @@ button {
   font-weight: 300;
   font-size: 14px;
   line-height: 1.71;
-  padding: 90px 33px 102px 20px; }
+  padding: 90px 33px 102px 20px;
+  padding-left: 0; }
 
 .review__btn {
   background-color: #2f3234; }

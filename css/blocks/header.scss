@@ -8,5 +8,7 @@
 .header__buttons {
   display: flex;
   align-items: center;
+  @include ubuntu();
+  font-weight: 500;
 }
 
