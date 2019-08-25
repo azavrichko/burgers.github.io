@@ -14,7 +14,13 @@ height: 100%;
 
   @include tablets {
     flex-direction: column;
-    padding: 0 23%;
+    padding: 0 6%;
+    position: absolute;
+    top: 20%;
+  }
+
+  @include phones {
+    padding: 0 0;    
   }
 }
 .hero__desc {
@@ -32,6 +38,11 @@ height: 100%;
   color: #fff;
   line-height: 1;
   @include lifehack;
+
+  @include phones {
+  font-size: 3.0625rem;  
+  }
+  
 }
 .hero__content-picture {
   max-width: 100%;
@@ -42,7 +53,7 @@ height: 100%;
   position: relative;
   left: 50%;
   transform: translateX(-50%);
-  max-width: 100%;
+  //max-width: 100%;
   max-height: 100%;
 
   @include tablets {

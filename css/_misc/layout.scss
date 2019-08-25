@@ -2,11 +2,11 @@ html {
   font-size: 16px;
 
   @include tablets {
-    font-size: 15px;
+    font-size: rem(15px);
   }
   
   @include phones {
-    font-size: 14px;
+    font-size: rem(14px);
   }
 
 }

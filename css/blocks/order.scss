@@ -152,6 +152,9 @@
     &+.order__radio-fake {
       &:after {
         background: transparent;
+        background-image: url('../img/content/checkbox.png');
+        background-repeat: no-repeat;
+        background-position: center;
       }
     }
   }
@@ -186,4 +189,11 @@
   padding-right: 0;
   text-transform: none;
   background: transparent;
+}
+.order__form-input {
+  border: 2px transparent solid;
+}
+.order__form-input:focus {
+  border: 2px #f9b43b solid;
+  outline: 0;
 }
