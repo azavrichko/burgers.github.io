@@ -9,7 +9,11 @@ $red: #e35028;
 
 //setups
 @import "_misc/fonts.scss";
+@import "_misc/mixins.scss";
+@import "_misc/media.scss";
 @import "_misc/layout.scss";
+
+//blocks
 @import "blocks/section.scss";
 @import "blocks/hero.scss";
 @import "blocks/header.scss";
@@ -20,6 +24,13 @@ $red: #e35028;
 @import "blocks/best.scss";
 @import "blocks/reviews.scss";
 @import "blocks/order.scss";
-@import "blocks/form.scss";
+//@import "blocks/form.scss";
 @import "blocks/fixed-menu.scss";
+@import "blocks/team.scss";
+@import "blocks/team-acco.scss";
+@import "blocks/menu.scss";
+@import "blocks/menu-acco.scss";
+@import "blocks/map.scss";
+@import "blocks/footer.scss";
+@import "blocks/socials.scss";
 

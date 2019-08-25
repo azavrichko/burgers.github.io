@@ -1,0 +1,47 @@
+.team {
+	background-image: url('../img/bg/team-bg.jpg');
+	background-repeat: no-repeat;
+	background-position: top;
+	background-size: cover;
+	position: relative;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	@include tablets {
+		&:before {
+			content: '';
+			display: block;
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			background-color: rgba(47, 50, 52, .93);
+		}
+	}
+	.section__title {
+		margin-bottom: rem(45px);
+		@include phones {
+			margin-bottom: rem(20px);
+		}
+	}
+}
+
+.team__content {
+	position: absolute;
+	background-color: rgba(47, 50, 52, .93);
+	left: 50%;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	text-align: left;
+	padding: rem(100px) rem(65px) 0 rem(65px);
+	@include tablets {
+		left: 0;
+		padding: 0;
+		position: relative;
+		text-align: center;
+		background-color: transparent;
+	}
+}

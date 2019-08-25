@@ -1,8 +1,8 @@
 .title {
-  font-size: 72px;
+  font-size: rem(72px);
   @include gagalin;
   color: $yellow;
-  margin-bottom: 55px;
+  margin-bottom: rem(55px);
   line-height: 1;
 
   &--color {
@@ -10,11 +10,11 @@
       color: $black;
     }
 
-    &--yellow {
+    &--white {
       color: white;
     }
   }
   &--centered {
     text-align: center;
-  }
+  }  
 }

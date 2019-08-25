@@ -1,0 +1,26 @@
+.socials {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.socials__item {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: rem(20px);
+}
+.socials__link {
+  display: inline-block;
+  max-width: rem(20px);
+  max-height: rem(20px);
+  overflow: hidden;
+}
+.socials__icon {
+  width: rem(20px);
+  height: rem(20px);
+  fill: #fff;
+  opacity: .3; 
+  transition: .3s;
+}
+.socials__link:hover .socials__icon {
+  opacity: 1;
+}
