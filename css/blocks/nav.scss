@@ -67,4 +67,11 @@
   color: #fff;
   font-size: rem(13px);
   text-transform: uppercase;
+
+  @include tablets {
+    display: inline-block;
+    margin: 30px;    
+    font-size: rem(24px);
+    position: relative;
+  }
 }

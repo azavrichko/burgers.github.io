@@ -358,7 +358,7 @@ body {
   height: 100%; }
 
 body {
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 1.42;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -604,6 +604,12 @@ button {
   color: #fff;
   font-size: 0.8125rem;
   text-transform: uppercase; }
+  @media screen and (max-width: 768px) {
+    .nav__link {
+      display: inline-block;
+      margin: 30px;
+      font-size: 1.5rem;
+      position: relative; } }
 
 .btn {
   padding: 0.75rem 15px;
