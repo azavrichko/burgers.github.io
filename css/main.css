@@ -488,18 +488,17 @@ button {
 .hero__content-picture {
   max-width: 100%; }
 
-.hero__content-img {
-  display: inline-block;
-  position: relative;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  transform: translateX(-50%);
-  max-height: 100%; }
-  @media screen and (max-width: 768px) {
-    .hero__content-img {
-      max-width: 80%;
-      padding-bottom: 0; } }
+@media screen and (max-width: 768px) {
+  .hero__content-img {
+    max-width: 80%;
+    padding-bottom: 0;
+    display: inline-block;
+    position: relative;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    max-height: 100%; } }
 
 .header {
   display: -webkit-box;
@@ -523,6 +522,9 @@ button {
   font-family: 'Ubuntu', Helvetica, sans-serif;
   font-weight: 300;
   font-weight: 500; }
+  @media screen and (max-width: 768px) {
+    .header__buttons {
+      margin-left: auto; } }
 
 .logo__container {
   max-width: 100%; }

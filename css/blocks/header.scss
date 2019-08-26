@@ -11,7 +11,9 @@
   @include ubuntu();
   font-weight: 500;
 
-  
+  @include tablets {
+    margin-left: auto;
+  }
 }
 
 .logo__container {
