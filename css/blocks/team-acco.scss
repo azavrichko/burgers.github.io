@@ -126,10 +126,14 @@
 	height: 120px;
 }
 
-.team-acco__content--active {
+/*.team-acco__content--active {
 	display: inline-block;
 	width: 85%;
 	vertical-align: top;
 	text-align: left;
 	padding: 0 .9375rem;
+}*/
+.team-acco__content--active {
+display: block;
+overflow: hidden;
 }

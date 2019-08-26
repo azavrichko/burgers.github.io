@@ -1208,12 +1208,16 @@ button {
 .team-acco__item--active {
   height: 120px; }
 
+/*.team-acco__content--active {
+	display: inline-block;
+	width: 85%;
+	vertical-align: top;
+	text-align: left;
+	padding: 0 .9375rem;
+}*/
 .team-acco__content--active {
-  display: inline-block;
-  width: 85%;
-  vertical-align: top;
-  text-align: left;
-  padding: 0 .9375rem; }
+  display: block;
+  overflow: hidden; }
 
 .menu {
   background: url("../img/bg/menu-bg.jpg") no-repeat;
@@ -1288,6 +1292,12 @@ button {
   @media screen and (max-width: 480px) {
     .menu-acco__text {
       padding: 1.5625rem 0.9375rem; } }
+
+.menu-acco__content--active {
+  width: 575px; }
+
+.menu-acco__text--active {
+  display: block; }
 
 .map {
   background: url("../img/content/map.jpg") center center/cover no-repeat;
