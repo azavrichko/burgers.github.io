@@ -12,6 +12,8 @@ $red: #e35028;
 @import "_misc/mixins.scss";
 @import "_misc/media.scss";
 @import "_misc/layout.scss";
+@import "_misc/animate.scss";
+
 
 //blocks
 @import "blocks/section.scss";
@@ -34,3 +36,4 @@ $red: #e35028;
 @import "blocks/footer.scss";
 @import "blocks/socials.scss";
 @import "blocks/hamburger.scss";
+@import "blocks/burgers.scss";

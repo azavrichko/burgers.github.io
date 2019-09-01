@@ -18,8 +18,8 @@
         </a>
         </div>
         <div class="header__buttons">
-          <nav class="nav">
-            <ul class="nav__list">
+          <nav class="nav animated fadeIn" id="hamburgerMenu">
+            <ul class="nav__list ">
               <li class="nav__item">
                 <a href="#" class="nav__link">О нас</a>
               </li>
@@ -45,11 +45,11 @@
           </nav>
           <button type="button" class="btn">Заказать</button>
         </div>
-        <div class="hamburger hamburger--squeeze">
+        <a href="" class="hamburger hamburger--squeeze" id="hamburgerButton">
           <div class="hamburger-box">
             <div class="hamburger-inner"></div>
           </div>
-        </div>
+        </a>
         
       </header>
       <div class="hero__content">
@@ -114,7 +114,101 @@
     </div>
   </section>
    <!--3 экран-->
-   
+  <section class="section burgers">
+    <div class="container">
+      <div class="burger">
+        <div class="burger__wrapper">
+            <ul class="burger__list">
+              <li class="burger__item">
+                <div class="burger__left">
+                  <div class="burger__img">
+                    <img src="./img/content/burger/one-burger.png" alt="" class="burger__picture">
+                  </div>
+                </div>
+                <div class="burger__right">
+                  <div class="burger__info">
+                    <div class="title title--color--white">DARK BEEF BURGER</div>
+                    <div class="burger__description">
+                      <p>Ваш старый добрый знакомый, с рубленым бифштексом из 100% говядины, тремя кусочками нежнейшего сыра эмменталь, двумя помидорами, луком, салатом и соусом гриль теперь с добавлением экзотического соуса чураско.</p>
+                    </div>
+                    <div class="burger__price-order">
+                      <div class="burger__price">
+                        <div class="burger__price-value">500</div>
+                        <div class="burger__price-currency">рублей</div>
+                      </div>
+                      <button class="order-link">Заказать</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="burger__caloricity">
+                  <div class="burger__caloricity-value">1200</div>
+                  <div class="burger__caloricity-measure">ккал</div>
+                </div>  
+                <div class="burger__ingredients">
+                  <svg class="burger__ingredients-picture">
+                    <use xlink:href="./img/icons/sprite.svg#burger"></use>
+                  </svg>
+                  <div class="burger__ingredients-title">Состав</div>
+                  <div class="burger__ingredients-dropdown dropdown">
+                    <ul class="dropdown__list">
+                      <li class="dropdown__item">
+                        <svg class="dropdown__picture"></svg>
+                        <div class="dropdown__text">Говядина</div>
+                        <div class="dropdown__weight">300г</div>
+                      </li>
+                      <li class="dropdown__item">
+                        <svg class="dropdown__picture"></svg>
+                        <div class="dropdown__text">Булочки</div>
+                        <div class="dropdown__weight">100г</div>
+                      </li>  
+                      <li class="dropdown__item">
+                        <svg class="dropdown__picture"></svg>
+                        <div class="dropdown__text">Зелень</div>
+                        <div class="dropdown__weight">70г</div>
+                      </li>  
+                      <li class="dropdown__item">
+                        <svg class="dropdown__picture"></svg>
+                        <div class="dropdown__text">Соус</div>
+                        <div class="dropdown__weight">150г</div>
+                      </li>   
+                      <li class="dropdown__item">
+                        <svg class="dropdown__picture"></svg>
+                        <div class="dropdown__text">Овощи</div>
+                        <div class="dropdown__weight">200г</div>
+                      </li>  
+                      <li class="dropdown__item">
+                        <svg class="dropdown__picture"></svg>
+                        <div class="dropdown__text">Сыр</div>
+                        <div class="dropdown__weight">80г</div>
+                      </li>   
+                    </ul>  
+                  </div>
+                </div>
+              </li>
+              <li class="burger__item"></li>
+              <li class="burger__item"></li>
+              <li class="burger__item"></li>
+            </ul>
+        </div>
+        <div class="burger__controls">
+          <a href="" class="burger__controls-link burger__controls-link--next">
+            <svg class="burger__controls-picture">
+              <use xlink:href="./img/icons/sprite.svg#arrow-scroll"></use>
+            </svg>
+          </a>
+          <a href="" class="burger__controls-link burger__controls-link--prev">
+            <svg class="burger__controls-picture">
+              <use xlink:href="./img/icons/sprite.svg#arrow-scroll"></use>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section> 
+
+
+
  <!--4 экран--> 
  <section class="section team">
     <div class="team__section">
@@ -462,5 +556,7 @@
     <button type="button" class="fixed-menu__dot"></button>
   </li>
 </ul>
+
+<script type="text/javascript" src="js/script.js"></script>
 </body>
 </html>

@@ -1,0 +1,206 @@
+ .burgers { 
+  background: linear-gradient(to bottom,#f9b43b 0,#eb8c38 40%,#eb8c38 60%,#eb8c38 60%,#f9b43b 100%);
+  position: relative;
+  text-align: left; 
+  display: flex;    
+  align-items: center;  
+}    
+
+.burger {
+  position: relative;
+  display: flex;  
+  align-items: center;
+}
+
+.burger__wrapper {
+  position: relative;  
+  display: flex;  
+  align-items: center;
+  overflow: hidden;
+}
+.burger__list {
+  position: relative;  
+  display: flex;
+  will-change: right;  
+  transition: right .3s;
+}
+.burger__item {  
+  display: flex;  
+  justify-content: space-between;
+  padding-bottom: rem(75px);
+  position: relative;
+}
+
+.burger__left, .burger__right {
+  width: 49%;  
+  display: flex; 
+  align-items: center; 
+  justify-content: center;
+}
+
+.burger__left {  
+  align-items: flex-end;
+}
+.burger__img {
+  width: 100%;
+  text-align: center;
+}
+.burger__picture {
+  max-width: 97%;
+}
+.burger__info {
+  color: #fff;
+}
+.burgers .section__title {
+  line-height: rem(64px);
+  margin-bottom: rem(40px);
+}
+.burger__description {
+  @include ubuntu();
+  font-weight: 300;
+  font-size: rem(14px);
+  margin-bottom: rem(25px);
+  line-height: 1.71;
+}
+.burger__price-order {
+  display: flex;  
+  align-items: baseline;
+  line-height: 1;
+}
+.burger__price {
+  color: #e45028;
+  font-family: Gagalin;
+  margin-right: rem(30px);
+}
+.burger__price-value {
+  display: inline-block;
+  font-size: rem(72px);
+}
+.burger__price-currency {
+  display: inline-block;
+  font-size: rem(30px);
+}
+.order-link {
+  display: inline-block;
+  min-width: rem(98px);
+  padding: rem(10px) rem(17px);  
+  border-radius: rem(5px);
+  background-color: #e45028;
+  color: #fff;
+  text-decoration: none;
+  font-size: rem(13px);
+  font-weight: 500;
+  line-height: 1.42;
+  text-transform: uppercase;
+  outline: 0;
+  border: 0;  
+  transition: .5s;
+  cursor: pointer;
+}
+.burger__caloricity {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  @include gagalin;
+  color: #fff;
+  opacity: .5; 
+  display: flex;  
+  flex-direction: column;  
+  align-items: center;
+}
+.burger__caloricity-value {
+  width: rem(60px);
+  height: rem(60px);
+  font-size: rem(20px);
+  line-height: rem(75px);
+  text-align: center;
+  background-image: url("../img/icons/kkal.svg");
+  background-repeat: no-repeat;  
+  background-size: contain;
+  background-position: center;
+}
+.burger__caloricity-measure {
+  font-size: rem(14px);
+}
+.burger__ingredients {
+  position: absolute;
+  left: 0;
+  top: rem(10px);
+  width: rem(90px);
+  height: rem(90px);
+  background-color: #f08c33;
+  color: #fff;
+  @include gagalin;
+  font-size: rem(14px);  
+  display: flex;  
+  flex-direction: column;  
+  align-items: center;
+  justify-content: center;  
+  border-radius: rem(5px);  
+  transition: .3s;
+}
+.burger__ingredients-picture {
+  height: 55%;
+  width: 100%;
+  fill: #fff;
+  margin-bottom: rem(5px);
+}
+.dropdown {  
+  display: flex;
+  position: absolute;
+  left: rem(-9999px);
+  top: 0;
+  background-color: #fff;
+  opacity: 0;
+  border-radius: rem(5px);
+  transition: opacity .4s;
+  padding: rem(20px);
+  width: rem(270px);
+}
+.dropdown__list {
+  width: 100%;
+}
+.dropdown__item {  
+  display: flex;
+  width: 100%;
+  margin-bottom: rem(15px); 
+  align-items: center;  
+  justify-content: space-between;
+  font-size: rem(14px);
+  color: #2f3234;
+  @include ubuntu;
+  font-weight: 300;
+  text-align: left;
+}
+.dropdown__text {  
+  flex: 1;
+  font-weight: 500;
+  margin-right: rem(10px);
+}
+
+.burger__controls-link--next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: rem(-20px);
+}
+.burger__controls-link {
+  fill: #fff;
+}
+.burger__controls-link--next .burger__controls-picture {  
+  transform: rotate(-90deg);
+}
+.burger__controls-link--prev {
+  position: absolute;
+  top: 50%;  
+  transform: translateY(-50%);
+  left: rem(-20px);
+}
+.burger__controls-link--prev .burger__controls-picture {
+  transform: rotate(90deg);
+}
+
+.burger__controls-picture {
+  width: rem(25px);
+  height: rem(25px);
+}
