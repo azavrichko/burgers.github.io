@@ -178,6 +178,10 @@
   justify-content: center;  
   border-radius: rem(5px);  
   transition: .3s;
+
+  &:hover {
+    background-color: #e45028;
+  }
 }
 .burger__ingredients-picture {
   height: 55%;
@@ -202,6 +206,7 @@
     padding-right: 2.5rem;
   }
 }
+
 .dropdown__list {
   width: 100%;
 }
@@ -217,6 +222,12 @@
   font-weight: 300;
   text-align: left;
 }
+.dropdown__picture {
+  max-width: 45px;
+  max-height: 45px;
+  margin-right: 38px;
+}
+
 .dropdown__text {  
   flex: 1;
   font-weight: 500;

@@ -4346,6 +4346,8 @@ button {
   -webkit-transition: .3s;
   -o-transition: .3s;
   transition: .3s; }
+  .burger__ingredients:hover {
+    background-color: #e45028; }
 
 .burger__ingredients-picture {
   height: 55%;
@@ -4394,6 +4396,11 @@ button {
   font-weight: 300;
   font-weight: 300;
   text-align: left; }
+
+.dropdown__picture {
+  max-width: 45px;
+  max-height: 45px;
+  margin-right: 38px; }
 
 .dropdown__text {
   -webkit-box-flex: 1;
