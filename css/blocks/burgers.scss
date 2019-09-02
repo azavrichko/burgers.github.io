@@ -10,6 +10,11 @@
   position: relative;
   display: flex;  
   align-items: center;
+
+  @include tablets {
+    width: 80%;
+    margin: 0 auto;
+  }
 }
 
 .burger__wrapper {
@@ -29,10 +34,33 @@
   justify-content: space-between;
   padding-bottom: rem(75px);
   position: relative;
+
+  @include tablets {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 0;
+    text-align: center;
+    padding-top: rem(90px);
+  }
+
+}
+.burger__left{
+  width: 51%;
+
+  @include tablets {
+    width: 75%;
+  }
+}
+.burger__right {
+  width: 48%;
+  
+  @include tablets {
+    width: 100%;
+  }
 }
 
-.burger__left, .burger__right {
-  width: 49%;  
+.burger__left, .burger__right {    
   display: flex; 
   align-items: center; 
   justify-content: center;
@@ -66,11 +94,16 @@
   display: flex;  
   align-items: baseline;
   line-height: 1;
+
+  @include tablets {
+    justify-content: center;
+  }
 }
 .burger__price {
-  color: #e45028;
+  color: #e35028;
   font-family: Gagalin;
   margin-right: rem(30px);
+  font-family: 'Gagalin-Regular', Helvetica, sans-serif;
 }
 .burger__price-value {
   display: inline-block;
@@ -81,15 +114,15 @@
   font-size: rem(30px);
 }
 .order-link {
+  @include ubuntu(medium);
   display: inline-block;
   min-width: rem(98px);
   padding: rem(10px) rem(17px);  
   border-radius: rem(5px);
-  background-color: #e45028;
+  background-color: #e35028;
   color: #fff;
   text-decoration: none;
-  font-size: rem(13px);
-  font-weight: 500;
+  font-size: rem(13px);  
   line-height: 1.42;
   text-transform: uppercase;
   outline: 0;
@@ -107,6 +140,13 @@
   display: flex;  
   flex-direction: column;  
   align-items: center;
+
+  @include tablets {
+    right: 0;
+    top: 0.625rem;
+    left: auto;
+    bottom: auto;
+  }
 }
 .burger__caloricity-value {
   width: rem(60px);
@@ -156,6 +196,11 @@
   transition: opacity .4s;
   padding: rem(20px);
   width: rem(270px);
+
+  @include tablets {
+    width: 20rem;
+    padding-right: 2.5rem;
+  }
 }
 .dropdown__list {
   width: 100%;
