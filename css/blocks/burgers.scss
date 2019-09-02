@@ -202,8 +202,8 @@
   width: rem(270px);
 
   @include tablets {
-    width: 20rem;
-    padding-right: 2.5rem;
+    width: rem(320px);
+    padding-right: rem(40px);
   }
 }
 
@@ -223,9 +223,9 @@
   text-align: left;
 }
 .dropdown__picture {
-  max-width: 45px;
-  max-height: 45px;
-  margin-right: 38px;
+  max-width: rem(45px);
+  max-height: rem(45px);
+  margin-right: rem(38px);
 }
 
 .dropdown__text {  
