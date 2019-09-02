@@ -181,6 +181,10 @@
 
   &:hover {
     background-color: #e45028;
+    .dropdown {
+      opacity: 1;
+      left: 90px;
+    }
   }
 }
 .burger__ingredients-picture {
