@@ -3768,10 +3768,17 @@ button {
 
 .team-acco__content {
   padding-top: 0.875rem;
-  display: none; }
+  height: 0;
+  overflow: hidden;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s; }
   @media screen and (max-width: 768px) {
     .team-acco__content {
       padding: 0 25%; } }
+
+.team-acco__content.active {
+  height: 120px; }
 
 .team-acco__pic {
   text-align: center;
@@ -3808,9 +3815,9 @@ button {
   color: #fff;
   font-size: 0.875rem; }
 
-.team-acco__item--active {
-  height: 120px; }
-
+/*.team-acco__item--active {
+	height: 120px;
+}*/
 /*.team-acco__content--active {
 	display: inline-block;
 	width: 85%;
@@ -3818,10 +3825,27 @@ button {
 	text-align: left;
 	padding: 0 .9375rem;
 }*/
-.team-acco__content--active {
-  display: block;
-  overflow: hidden; }
-
+/*.team-acco__content--active {
+display: block;
+overflow: hidden;
+}*/
+/*.team-acco__item--active {
+	height: 150px;
+	.team-acco__trigger {
+		color: $yellow;
+		&:before {
+			transform: rotate(-180deg);
+		}
+	}
+	.team-acco__content {
+		//height: auto;
+		display: block;
+	}
+}*/
+/*
+.team-acco__content.active {
+	height: 100px;
+}*/
 .menu {
   background: url("../img/bg/menu-bg.jpg") no-repeat;
   background-size: cover;
@@ -3843,6 +3867,10 @@ button {
   height: 100%; }
   .menu-acco__item.active .menu-acco__trigger-text {
     color: #f9b43b; }
+  .menu-acco__item.active .menu-acco__item {
+    width: 540px; }
+  .menu-acco__item.active .menu-acco__text {
+    display: block; }
 
 .menu-acco__trigger {
   width: 5rem;
@@ -3896,10 +3924,20 @@ button {
     .menu-acco__text {
       padding: 1.5625rem 0.9375rem; } }
 
+/*
 .menu-acco__content--active {
-  width: 575px; }
+	width: 575px;	
+}*/
+/*.menu-acco__text{
+	display: block;
+}*/
+.menu-acco__item--active .menu-acco__trigger-text {
+  color: #f9b43b; }
 
-.menu-acco__text--active {
+.menu-acco__item--active .menu-acco__item {
+  width: 540px; }
+
+.menu-acco__item--active .menu-acco__text {
   display: block; }
 
 .map {
@@ -4135,7 +4173,7 @@ button {
   align-items: center; }
   @media screen and (max-width: 768px) {
     .burger {
-      width: 80%;
+      width: 93%;
       margin: 0 auto; } }
 
 .burger__wrapper {
@@ -4149,6 +4187,7 @@ button {
   overflow: hidden; }
 
 .burger__list {
+  right: 0;
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -4159,6 +4198,7 @@ button {
   transition: right .3s; }
 
 .burger__item {
+  width: 940px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -4169,6 +4209,7 @@ button {
   position: relative; }
   @media screen and (max-width: 768px) {
     .burger__item {
+      width: 663px;
       -webkit-box-orient: vertical;
       -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -4182,6 +4223,21 @@ button {
       padding-bottom: 0;
       text-align: center;
       padding-top: 5.625rem; } }
+  @media screen and (max-width: 480px) {
+    .burger__item {
+      width: 409px; } }
+
+.burger__item.active {
+  width: 940px;
+  -webkit-transition: .5s;
+  -o-transition: .5s;
+  transition: .5s; }
+  @media screen and (max-width: 768px) {
+    .burger__item.active {
+      width: 663px; } }
+  @media screen and (max-width: 480px) {
+    .burger__item.active {
+      width: 409px; } }
 
 .burger__left {
   width: 51%; }
@@ -4444,3 +4500,60 @@ button {
 .burger__controls-picture {
   width: 1.5625rem;
   height: 1.5625rem; }
+
+.video {
+  background: url("../img/bg/video-bg.jpg") center center/cover no-repeat;
+  position: relative;
+  background-position: top; }
+
+.overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  background-color: rgba(47, 50, 52, 0.92); }
+
+.popup {
+  position: absolute;
+  background-color: #fff;
+  font-family: Ubuntu,sans-serif;
+  font-weight: 300;
+  font-size: .875rem;
+  width: 28.75rem;
+  border-radius: .3125rem;
+  padding: 1.5625rem 1.25rem;
+  top: 550%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  z-index: 555; }
+
+.popup__title {
+  font-family: Gagalin,sans-serif;
+  font-weight: 400;
+  margin-bottom: 1.25rem; }
+
+.popup__close {
+  position: absolute;
+  text-decoration: none;
+  top: 1.25rem;
+  right: 1.25rem;
+  width: 1.5625rem;
+  height: 1.5625rem; }
+
+.popup__close-picture {
+  width: 100%;
+  height: 100%;
+  opacity: .7; }

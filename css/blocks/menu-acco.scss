@@ -13,6 +13,12 @@
 		.menu-acco__trigger-text {
 			color: $yellow;
 		}
+		.menu-acco__item {
+			width: 540px;
+		}
+		.menu-acco__text {
+			display: block;
+		}
 	}
 }
 
@@ -71,10 +77,22 @@
   }
 }
 
+/*
 .menu-acco__content--active {
-	width: 575px;
-	
-}
-.menu-acco__text--active{
+	width: 575px;	
+}*/
+/*.menu-acco__text{
 	display: block;
+}*/
+
+.menu-acco__item--active {
+	.menu-acco__trigger-text {
+		color: $yellow;
+	}
+	.menu-acco__item {
+		width: 540px;
+	}
+	.menu-acco__text {
+		display: block;
+	}
 }

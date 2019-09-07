@@ -12,7 +12,7 @@
   align-items: center;
 
   @include tablets {
-    width: 80%;
+    width: 93%;
     margin: 0 auto;
   }
 }
@@ -24,18 +24,22 @@
   overflow: hidden;
 }
 .burger__list {
+  right: 0; 
   position: relative;  
   display: flex;
   will-change: right;  
   transition: right .3s;
 }
 .burger__item {  
+  width: 940px;
   display: flex;  
   justify-content: space-between;
   padding-bottom: rem(75px);
   position: relative;
+  
 
   @include tablets {
+    width: 663px;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -44,7 +48,25 @@
     padding-top: rem(90px);
   }
 
+  @include phones {
+    width: 409px;
+  }
+
 }
+.burger__item.active {
+ width: 940px;
+  transition: .5s;
+
+  @include tablets {
+    width: 663px;    
+  }
+
+  @include phones {
+    width: 409px;
+  }
+}
+
+
 .burger__left{
   width: 51%;
 

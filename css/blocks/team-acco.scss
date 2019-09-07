@@ -74,12 +74,20 @@
 
 .team-acco__content {
 	padding-top: rem(14px);
-	display: none;
+	height: 0;
+	overflow: hidden;
+	transition: .3s;
+	//display: none;
 
 	@include tablets {
 		padding: 0 25%;
 	}
+	
 }
+.team-acco__content.active {
+	height: 120px;
+}
+
 
 .team-acco__pic {
 	text-align: center;
@@ -122,9 +130,9 @@
 	font-size: rem(14px);
 }
 
-.team-acco__item--active {
+/*.team-acco__item--active {
 	height: 120px;
-}
+}*/
 
 /*.team-acco__content--active {
 	display: inline-block;
@@ -133,7 +141,26 @@
 	text-align: left;
 	padding: 0 .9375rem;
 }*/
-.team-acco__content--active {
+/*.team-acco__content--active {
 display: block;
 overflow: hidden;
-}
+}*/
+
+/*.team-acco__item--active {
+	height: 150px;
+	.team-acco__trigger {
+		color: $yellow;
+		&:before {
+			transform: rotate(-180deg);
+		}
+	}
+	.team-acco__content {
+		//height: auto;
+		display: block;
+	}
+}*/
+
+/*
+.team-acco__content.active {
+	height: 100px;
+}*/
