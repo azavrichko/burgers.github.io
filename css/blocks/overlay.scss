@@ -18,9 +18,9 @@
   font-weight: 300;
   color: #2f3234;
   text-align: center;
-  font-size: .875rem;  
-  border-radius: .3125rem;
-  padding: 1.5625rem 1.25rem;
+  font-size: rem(14px);  
+  border-radius: rem(5px);
+  padding: rem(25px) rem(20px);
 }
 
 .overlay__title {
@@ -28,11 +28,11 @@
 }
 
 .overlay__content {
-  width: 400px;
-  border-radius: 5px;
-  padding: 10px;
+  width: rem(400px);
+  border-radius: rem(5px);
+  padding: rem(10px);
   color: #444;
-  font: 16px Helvetica, sans-serif;
+  font-size: rem(16px);
   margin: 0;
 }
 /*
@@ -54,13 +54,13 @@
 
 .overlay__close {
   display: inline-block;
-  min-width: 6.125rem;
-  padding: .625rem 1.0625rem;    
-  border-radius: 5px;
+  min-width: rem(20px);
+  padding: rem(10px) rem(17px);    
+  border-radius: rem(5px);
   background-color: #e45028;
   color: #fff;
   text-decoration: none;
-  font-size: .8125rem;
+  font-size: rem(13px);
   font-weight: 500;
   line-height: 1.42;
   text-transform: uppercase;

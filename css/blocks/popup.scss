@@ -16,10 +16,10 @@
     background-color: #fff;
     font-family: Ubuntu,sans-serif;
     font-weight: 300;
-    font-size: .875rem;
-    width: 28.75rem;    
-    border-radius: .3125rem;
-    padding: 1.5625rem 1.25rem;    
+    font-size: rem(14px);
+    width: rem(460px);    
+    border-radius: rem(5px);
+    padding: rem(25px) rem(20px);    
     top: 550%;
     left: 50%;    
     transform: translate(-50%,-50%);
@@ -30,27 +30,27 @@
   position: relative;
   font-family: Gagalin,sans-serif;
   font-weight: 400;
-  margin-bottom: 1.25rem;
+  margin-bottom: rem(20px);
 }
 
 .popup__content {
-  width: 400px;
-  border-radius: 5px;  
+  width: rem(400px);
+  border-radius: rem(5px);  
   color: #444;
-  font: 16px Helvetica, sans-serif;
+  font-size: rem(16px);
   margin: 0;
 }
 
 .popup__close {
   position: absolute;
   text-decoration: none;
-  top: 1.25rem;
-  right: 1.25rem;
-  width: 1.5625rem;
-  height: 1.5625rem; 
+  top: rem(20px);
+  right: rem(20px);
+  width: rem(25px);
+  height: rem(25px); 
 }
 .popup__close-picture {
-  width: 20px;
-  height: 20px;
+  width: rem(20px);
+  height: rem(20px);
 }
 

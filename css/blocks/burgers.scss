@@ -49,20 +49,20 @@
   }
 
   @include phones {
-    width: 409px;
+    width: rem(409px);
   }
 
 }
 .burger__item.active {
- width: 940px;
+ width: rem(940px);
   transition: .5s;
 
   @include tablets {
-    width: 663px;    
+    width: rem(663px);    
   }
 
   @include phones {
-    width: 409px;
+    width: rem(409px);
   }
 }
 

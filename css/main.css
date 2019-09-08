@@ -3773,12 +3773,6 @@ button {
   -webkit-transition: .3s;
   -o-transition: .3s;
   transition: .3s; }
-  @media screen and (max-width: 768px) {
-    .team-acco__content {
-      padding: 0 25%; } }
-
-.team-acco__content.active {
-  height: 120px; }
 
 .team-acco__pic {
   text-align: center;
@@ -3791,6 +3785,9 @@ button {
   width: 6.25rem;
   height: 6.25rem;
   border-radius: 50%; }
+  @media screen and (max-width: 768px) {
+    .team-acco__img {
+      display: inline-block; } }
 
 .team-acco__text {
   width: 70%; }
@@ -3846,6 +3843,28 @@ overflow: hidden;
 .team-acco__content.active {
 	height: 100px;
 }*/
+.team-acco__content.active {
+  height: 120px; }
+  .team-acco__content.active .team-acco__trigger {
+    color: #f9b43b; }
+    .team-acco__content.active .team-acco__trigger:before {
+      -webkit-transform: rotate(-180deg);
+      -ms-transform: rotate(-180deg);
+      transform: rotate(-180deg); }
+  @media screen and (max-width: 768px) {
+    .team-acco__content.active {
+      padding: 0 25%; } }
+  @media screen and (max-width: 768px) {
+    .team-acco__content.active {
+      height: 200px; } }
+
+.team-acco__content .active .team-acco__trigger {
+  color: #f9b43b; }
+  .team-acco__content .active .team-acco__trigger:before {
+    -webkit-transform: rotate(-180deg);
+    -ms-transform: rotate(-180deg);
+    transform: rotate(-180deg); }
+
 .menu {
   background: url("../img/bg/menu-bg.jpg") no-repeat;
   background-size: cover;
@@ -3868,7 +3887,7 @@ overflow: hidden;
   .menu-acco__item.active .menu-acco__trigger-text {
     color: #f9b43b; }
   .menu-acco__item.active .menu-acco__item {
-    width: 540px; }
+    width: 33.75rem; }
   .menu-acco__item.active .menu-acco__text {
     display: block; }
 
@@ -3935,7 +3954,7 @@ overflow: hidden;
   color: #f9b43b; }
 
 .menu-acco__item--active .menu-acco__item {
-  width: 540px; }
+  width: 33.75rem; }
 
 .menu-acco__item--active .menu-acco__text {
   display: block; }
@@ -4225,19 +4244,19 @@ overflow: hidden;
       padding-top: 5.625rem; } }
   @media screen and (max-width: 480px) {
     .burger__item {
-      width: 409px; } }
+      width: 25.5625rem; } }
 
 .burger__item.active {
-  width: 940px;
+  width: 58.75rem;
   -webkit-transition: .5s;
   -o-transition: .5s;
   transition: .5s; }
   @media screen and (max-width: 768px) {
     .burger__item.active {
-      width: 663px; } }
+      width: 41.4375rem; } }
   @media screen and (max-width: 480px) {
     .burger__item.active {
-      width: 409px; } }
+      width: 25.5625rem; } }
 
 .burger__left {
   width: 51%; }
@@ -4531,19 +4550,19 @@ overflow: hidden;
   font-weight: 300;
   color: #2f3234;
   text-align: center;
-  font-size: .875rem;
-  border-radius: .3125rem;
+  font-size: 0.875rem;
+  border-radius: 0.3125rem;
   padding: 1.5625rem 1.25rem; }
 
 .overlay__title {
   position: relative; }
 
 .overlay__content {
-  width: 400px;
-  border-radius: 5px;
-  padding: 10px;
+  width: 25rem;
+  border-radius: 0.3125rem;
+  padding: 0.625rem;
   color: #444;
-  font: 16px Helvetica, sans-serif;
+  font-size: 1rem;
   margin: 0; }
 
 /*
@@ -4564,13 +4583,13 @@ overflow: hidden;
 */
 .overlay__close {
   display: inline-block;
-  min-width: 6.125rem;
-  padding: .625rem 1.0625rem;
-  border-radius: 5px;
+  min-width: 1.25rem;
+  padding: 0.625rem 1.0625rem;
+  border-radius: 0.3125rem;
   background-color: #e45028;
   color: #fff;
   text-decoration: none;
-  font-size: .8125rem;
+  font-size: 0.8125rem;
   font-weight: 500;
   line-height: 1.42;
   text-transform: uppercase;
@@ -4603,9 +4622,9 @@ overflow: hidden;
   background-color: #fff;
   font-family: Ubuntu,sans-serif;
   font-weight: 300;
-  font-size: .875rem;
+  font-size: 0.875rem;
   width: 28.75rem;
-  border-radius: .3125rem;
+  border-radius: 0.3125rem;
   padding: 1.5625rem 1.25rem;
   top: 550%;
   left: 50%;
@@ -4621,10 +4640,10 @@ overflow: hidden;
   margin-bottom: 1.25rem; }
 
 .popup__content {
-  width: 400px;
-  border-radius: 5px;
+  width: 25rem;
+  border-radius: 0.3125rem;
   color: #444;
-  font: 16px Helvetica, sans-serif;
+  font-size: 1rem;
   margin: 0; }
 
 .popup__close {
@@ -4636,5 +4655,5 @@ overflow: hidden;
   height: 1.5625rem; }
 
 .popup__close-picture {
-  width: 20px;
-  height: 20px; }
+  width: 1.25rem;
+  height: 1.25rem; }

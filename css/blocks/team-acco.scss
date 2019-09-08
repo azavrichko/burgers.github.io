@@ -42,7 +42,7 @@
 		left: rem(-18px);
 		top: rem(8px);
 		width: 0;
-    height: 0;
+		height: 0;		
 	}
 
 	&:before {
@@ -52,6 +52,7 @@
 		border-bottom: rem(0px) solid transparent;
 		transform: rotate(0deg);
 		transition: .3s;
+	
 	}
 
 	&:after {
@@ -68,6 +69,7 @@
 
 		&:before {
 			margin-top: rem(10px);
+			
 		}
 	}
 }
@@ -77,16 +79,10 @@
 	height: 0;
 	overflow: hidden;
 	transition: .3s;
-	//display: none;
+	//display: none;	
+}
 
-	@include tablets {
-		padding: 0 25%;
-	}
-	
-}
-.team-acco__content.active {
-	height: 120px;
-}
+
 
 
 .team-acco__pic {
@@ -102,6 +98,10 @@
 	width: rem(100px);
 	height: rem(100px);
 	border-radius: 50%;
+
+	@include tablets {
+		display: inline-block;
+	}
 }
 
 .team-acco__text {
@@ -164,3 +164,33 @@ overflow: hidden;
 .team-acco__content.active {
 	height: 100px;
 }*/
+
+.team-acco__content.active {
+	height: 120px;
+	.team-acco__trigger {
+		color: $yellow;
+
+		&:before {
+			transform: rotate(-180deg);
+		}
+	}
+@include tablets {
+	padding: 0 25%;
+}
+
+	@include tablets {
+		height: 200px;
+	}
+	
+	
+}
+
+
+.team-acco__content .active {
+	.team-acco__trigger {
+		color: $yellow;
+		&:before {
+			transform: rotate(-180deg);
+		}
+	}	
+}
