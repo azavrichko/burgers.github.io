@@ -143,10 +143,10 @@ let popup = options => {
 
 	let _openPopup = btn => {
 		let overlayElement = document.createElement('div');
-		overlayElement.classList.add('overlay');
+		overlayElement.classList.add('overlay_review');
 
 		let popupElement = document.createElement('div');
-		popupElement.classList.add('popup');
+		popupElement.classList.add('popup_review');
 
 		let contentElement = document.createElement('div');
 		contentElement.classList.add('popup__content');
@@ -409,8 +409,57 @@ $(document).ready(function(){
 
 });
 
+// popup form
 
+
+const openButton = document.querySelector(".openOverlay");
+const template = document.querySelector("#overlayTemplate").innerHTML;
+const overlay = createOverlay(template);
+
+function createOverlay(template) {
+	let fragment = document.createElement('div');
+
+	fragment.innerHTML = template;
+
+const overlayElement = fragment.querySelector(".overlay");
+const contentElement = fragment.querySelector(".overlay__content");
+const contentTitle = fragment.querySelector(".overlay__title");
+const closeElement = fragment.querySelector(".overlay__close");
+
+fragment = null;
+
+overlayElement.addEventListener("click", e => {
+	if (e.target === overlayElement) {
+		closeElement.click();		
+	}
+});
+
+closeElement.addEventListener("click", e => {
+	e.preventDefault();
+	document.body.removeChild(overlayElement);
+	document.body.classList.remove('locked');
+});
+
+return {
+	open() {
+		document.body.appendChild(overlayElement);
+		document.body.classList.add('locked');		
+	},
+	close() {
+		closeElement.click();		
+	},
+	setContent(content, title) {
+		contentElement.innerHTML = content;
+		if(title) {
+			contentTitle.innerHTML = title;
+		} else {
+			contentTitle.innerHTML = '';
+		}
+	}
+};
+}
 /* form order */
+/*
 const formOrder = $("#order-form");
 const formReset = $(".order__form-button_reset");
 formOrder.on('submit', function(e){
@@ -469,6 +518,102 @@ var openOverlay = options => {
 
 	return overlayElement;
 };
+
+*/
+
+/*
+const myForm = document.querySelector('#order-form');
+const sendButton = document.querySelector('#sendButton');
+
+sendButton.addEventListener('click', function(event) {
+event.preventDefault();
+
+//console.log(myForm.elements.name.value);
+//console.log(myForm.elements.phone.value);
+//console.log(myForm.elements.comment.value);
+
+if (validateForm(myForm)) {
+	const data = {
+		name: myForm.elements.name.value,
+		phone: myForm.elements.phone.value,
+		comment: myForm.elements.comment.value
+	};
+	
+	const xhr = new XMLHttpRequest();
+	xhr.responseType = 'json';
+	xhr.open('POST', 'https://webdev-api.loftschool.com/sendmail/fail');
+	xhr.send(JSON.stringify(data));
+	xhr.addEventListener('load', () => {
+		if (xhr.response.status) {
+			console.log('все ок');
+		}
+	});
+}
+});
+
+
+function validateForm(form) {
+	let valid = true;
+
+	if (!validateField(form.elements.name)) {
+		valid = false;
+	}
+	if (!validateField(form.elements.phone)) {
+		valid = false;
+	}
+	if (!validateField(form.elements.comment)) {
+		valid = false;
+	}
+	return valid;
+}
+
+function validateField(field) {
+	field.nextElementSibling.textContent = field.validationMessage;
+	return field.checkValidity();	
+}*/
+
+// модальное 
+
+
+
+// Form
+
+
+const myForm = document.querySelector('#myForm');
+let sendFormButton = document.querySelector('#sendForm');
+
+sendFormButton.addEventListener('click', function (e) {
+	e.preventDefault();
+
+	let formData = new FormData();
+
+	formData.append("name", myForm.elements.name.value);
+	formData.append("phone", myForm.elements.phone.value);
+	formData.append("comment", myForm.elements.comment.value);
+	formData.append("to", "principles@mail.ru");
+
+	let url = "https://webdev-api.loftschool.com/sendmail/";
+
+	const xhr = new XMLHttpRequest();
+
+	xhr.responseType = "json";
+	xhr.open("POST", url);
+	xhr.setRequestHeader("X-Requested-With", "XMLHttpRequest");
+	xhr.send(formData);
+
+	xhr.addEventListener('load', function () {
+		console.log(xhr);
+
+		if (xhr.status >= 400) {
+			overlay.open();
+			overlay.setContent('Что-то пошло не так');
+		} else {
+			overlay.open();
+			overlay.setContent(xhr.response.message);
+		}
+	});
+
+});
 
 
 

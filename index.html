@@ -64,7 +64,7 @@
         </div>
       </div>   
       <svg class="scroll-down-btn" style="fill: #fff">
-        <use xlink:href="img/icons/sprite.#arrow-scroll"></use>
+        <use xlink:href="img/icons/sprite.svg#arrow-scroll"></use>
       </svg>
     </section>
     <!--2 экран-->
@@ -736,16 +736,18 @@
     <div class="container">
       <div class="title title--centered">Закажите доставку</div>
       <div class="order__form">
-        <form action="https://webdev-api.loftschool.com/sendmail" method="POST" class="order__form-tag" id="order-form" >
+        <form action="https://webdev-api.loftschool.com/sendmail" method="POST" class="order__form-tag" id="myForm" >
           <div class="order__form-col">
             <div class="order__form-row order__form-row_double">
               <label class="order__form-block">
                 <div class="order__form-label">Имя</div>
                 <input class="order__form-input" name="name" type="text" placeholder="" required>
+                <div class="error"></div>
               </label>
               <label class="order__form-block">
                 <div class="order__form-label">Телефон</div>
                 <input class="order__form-input phone-mask" name="phone" type="text" placeholder="" required>
+                <div class="error"></div>
               </label>
             </div>
             <div class="order__form-row">
@@ -778,6 +780,7 @@
               <label class="order__form-block">
                 <div class="order__form-label">Комментарий</div>
                 <textarea class="order__form-input order__form-input_textarea" name="comment" required></textarea>
+                <div class="error"></div>
               </label>
             </div>
             <div class="order__form-buttons">
@@ -801,7 +804,7 @@
                 </label>
               </div>
               <div class="order__form-row">
-                <input class="order__form-button" name="" type="submit" value="Заказать">
+                <input class="order__form-button openOverlay" name="" type="submit" value="Заказать" id="sendForm">
                 <input class="order__form-button order__form-button_reset" name="" type="reset" value="Очистить">
               </div>
             </div>
@@ -902,9 +905,18 @@
     </li>
   </ul>
   </div>   
-
+  <script type="template" id="overlayTemplate">
+    <div class="overlay">
+      <div class="overlay__container">
+          <div class="overlay__title"></div>
+          <div class="overlay__content"></div>
+        <a class="overlay__close" href="#">Закрыть</a>        
+      </div>
+    </div>
+  </script>
   
 <script type="text/javascript" src="libs/jquery-3.3.1.min.js"></script>    
 <script type="text/javascript" src="js/script.js"></script>
+
 </body>
 </html>
