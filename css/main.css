@@ -420,6 +420,9 @@ button {
   cursor: pointer;
   color: inherit; }
 
+.locked {
+  overflow: hidden; }
+
 /*!
  * animate.css -https://daneden.github.io/animate.css/
  * Version - 3.7.2
@@ -3843,24 +3846,29 @@ overflow: hidden;
 .team-acco__content.active {
 	height: 100px;
 }*/
+/*
+.team-acco__content.active {
+	height: 120px;
+	.team-acco__trigger {
+		color: #444;
+
+		&:before {
+			transform: rotate(-180deg);
+		}
+	}
+@include tablets {
+	padding: 0 25%;
+}
+
+	@include tablets {
+		height: 200px;
+	}	
+}*/
 .team-acco__content.active {
   height: 120px; }
-  .team-acco__content.active .team-acco__trigger {
-    color: #f9b43b; }
-    .team-acco__content.active .team-acco__trigger:before {
-      -webkit-transform: rotate(-180deg);
-      -ms-transform: rotate(-180deg);
-      transform: rotate(-180deg); }
-  @media screen and (max-width: 768px) {
-    .team-acco__content.active {
-      padding: 0 25%; } }
-  @media screen and (max-width: 768px) {
-    .team-acco__content.active {
-      height: 200px; } }
-
-.team-acco__content .active .team-acco__trigger {
-  color: #f9b43b; }
-  .team-acco__content .active .team-acco__trigger:before {
+  .team-acco__content.active.team-acco__trigger {
+    color: #444; }
+  .team-acco__content.active:before {
     -webkit-transform: rotate(-180deg);
     -ms-transform: rotate(-180deg);
     transform: rotate(-180deg); }
@@ -3880,6 +3888,15 @@ overflow: hidden;
   right: 0;
   top: 0;
   bottom: 0; }
+  @media screen and (max-width: 480px) {
+    .menu-acco {
+      width: 100%;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: end;
+      -ms-flex-pack: end;
+      justify-content: flex-end; } }
 
 .menu-acco__item {
   float: left;
@@ -3890,6 +3907,25 @@ overflow: hidden;
     width: 33.75rem; }
   .menu-acco__item.active .menu-acco__text {
     display: block; }
+
+.menu-acco__item--active {
+  /*position: absolute;
+		left: 0; 
+		top: 0; 
+		width: 100%; 
+		height: 100%;  
+		z-index: 999999;
+		width: 100%; 
+		display: flex; 
+		justify-content: flex-end;*/ }
+  @media screen and (max-width: 480px) {
+    .menu-acco__item--active {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 999999; } }
 
 .menu-acco__trigger {
   width: 5rem;
@@ -3928,7 +3964,10 @@ overflow: hidden;
   float: left;
   background: rgba(47, 50, 52, 0.93);
   width: 0;
-  overflow: hidden; }
+  overflow: hidden;
+  -webkit-transition: width .3s;
+  -o-transition: width .3s;
+  transition: width .3s; }
 
 .menu-acco__text {
   font-family: 'Ubuntu', Helvetica, sans-serif;
@@ -4196,13 +4235,6 @@ overflow: hidden;
       margin: 0 auto; } }
 
 .burger__wrapper {
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
   overflow: hidden; }
 
 .burger__list {
@@ -4211,13 +4243,13 @@ overflow: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  will-change: right;
-  -webkit-transition: right .3s;
-  -o-transition: right .3s;
-  transition: right .3s; }
+  will-change: left;
+  -webkit-transition: left .3s;
+  -o-transition: left .3s;
+  transition: left .3s; }
 
 .burger__item {
-  width: 940px;
+  min-width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -4228,7 +4260,6 @@ overflow: hidden;
   position: relative; }
   @media screen and (max-width: 768px) {
     .burger__item {
-      width: 663px;
       -webkit-box-orient: vertical;
       -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -4242,21 +4273,11 @@ overflow: hidden;
       padding-bottom: 0;
       text-align: center;
       padding-top: 5.625rem; } }
-  @media screen and (max-width: 480px) {
-    .burger__item {
-      width: 25.5625rem; } }
 
 .burger__item.active {
-  width: 58.75rem;
   -webkit-transition: .5s;
   -o-transition: .5s;
   transition: .5s; }
-  @media screen and (max-width: 768px) {
-    .burger__item.active {
-      width: 41.4375rem; } }
-  @media screen and (max-width: 480px) {
-    .burger__item.active {
-      width: 25.5625rem; } }
 
 .burger__left {
   width: 51%; }

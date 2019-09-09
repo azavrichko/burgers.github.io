@@ -82,9 +82,6 @@
 	//display: none;	
 }
 
-
-
-
 .team-acco__pic {
 	text-align: center;
 	width: 30%;
@@ -164,11 +161,11 @@ overflow: hidden;
 .team-acco__content.active {
 	height: 100px;
 }*/
-
+/*
 .team-acco__content.active {
 	height: 120px;
 	.team-acco__trigger {
-		color: $yellow;
+		color: #444;
 
 		&:before {
 			transform: rotate(-180deg);
@@ -180,17 +177,20 @@ overflow: hidden;
 
 	@include tablets {
 		height: 200px;
+	}	
+}*/
+
+.team-acco__content.active {
+	height: 120px;
+		&.team-acco__trigger {
+		color: #444;
 	}
-	
-	
-}
-
-
-.team-acco__content .active {
-	.team-acco__trigger {
-		color: $yellow;
 		&:before {
 			transform: rotate(-180deg);
 		}
-	}	
-}
+	}
+
+
+
+	
+

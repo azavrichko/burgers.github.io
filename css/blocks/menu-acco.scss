@@ -3,6 +3,12 @@
 	right: 0;
 	top: 0;
 	bottom: 0;	
+
+	@include phones {
+		width: 100%; 
+		display: flex; 
+		justify-content: flex-end;
+	}
 }
 
 .menu-acco__item {
@@ -19,7 +25,28 @@
 		.menu-acco__text {
 			display: block;
 		}
+		
 	}
+}
+.menu-acco__item--active {
+	/*position: absolute;
+		left: 0; 
+		top: 0; 
+		width: 100%; 
+		height: 100%;  
+		z-index: 999999;
+		width: 100%; 
+		display: flex; 
+		justify-content: flex-end;*/
+	@include phones {
+		position: absolute;
+		left: 0; 
+		top: 0; 
+		width: 100%; 
+		height: 100%;  
+		z-index: 999999;
+		
+		}
 }
 
 .menu-acco__trigger {
@@ -60,6 +87,7 @@
 	background: rgba(#2f3234, .93);
 	width: 0;
 	overflow: hidden;
+	transition: width .3s
 }
 
 .menu-acco__text {

@@ -110,7 +110,7 @@ acco.addEventListener('click', function (e) {
 	let currentTarget = target.nextElementSibling;
 
 	function clear() {
-		let activeContent = document.querySelector('.team-acco__content.active');
+		let activeContent = document.querySelector('.team-acco__item.active'); //.team-acco__content.active
 		if (activeContent) {
 			activeContent.classList.remove('active');
 		}
@@ -353,6 +353,8 @@ slider({
 }).init();
 */
 
+//Слайдер
+
 $(document).ready(function(){
 
 	$('.burger__controls-link').on('click', function(e){
@@ -408,6 +410,13 @@ $(document).ready(function(){
 	});
 
 });
+
+
+
+
+
+
+
 
 // popup form
 
@@ -616,5 +625,8 @@ sendFormButton.addEventListener('click', function (e) {
 });
 
 
+
+//Для меню
+let neededWidth = userWidth -  widthTitle;
 
 
