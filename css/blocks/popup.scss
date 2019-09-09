@@ -12,18 +12,19 @@
 }
 
 .popup_review {  
+  max-width:95%;
   position: absolute;
-    background-color: #fff;
-    font-family: Ubuntu,sans-serif;
-    font-weight: 300;
-    font-size: rem(14px);
-    width: rem(460px);    
-    border-radius: rem(5px);
-    padding: rem(25px) rem(20px);    
-    top: 550%;
-    left: 50%;    
-    transform: translate(-50%,-50%);
-    z-index: 99999;
+  background-color: #fff;
+  font-family: Ubuntu,sans-serif;
+  font-weight: 300;
+  font-size: rem(14px);
+ // min-width: rem(460px);    
+  border-radius: rem(5px);
+  padding: rem(25px) rem(20px);    
+  top: 550%;
+  left: 50%;    
+  transform: translate(-50%,-50%);
+  z-index: 99999;
 }
 
 .popup__title {
@@ -34,7 +35,7 @@
 }
 
 .popup__content {
-  width: rem(400px);
+  //width: rem(400px);
   border-radius: rem(5px);  
   color: #444;
   font-size: rem(16px);
