@@ -630,3 +630,5 @@ sendFormButton.addEventListener('click', function (e) {
 let neededWidth = userWidth -  widthTitle;
 
 
+/* yandex map */
+
