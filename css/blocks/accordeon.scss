@@ -1,21 +1,21 @@
 .accordeon__item {
-	color: white;
+	color: #fff;
 	margin-bottom: rem(30px);
 	font-size: rem(14px);
-	font-family: 'Ubuntu';
-/*	@include tablets {
+	@include ubuntu();
+	@include tablets {
 		margin-bottom: rem(20px);
 	}
 	@include phones {
 		margin-bottom: rem(10px);
-	}*/
+	}
 }
 
 .accordeon__trigger {
-	color: white;
+	color: #fff;
 	text-decoration: none;
 	font-size: rem(14px);
-	font-family: 'Gagalin';
+	@include gagalin;
 	font-weight: 400;
 	display: inline-block;
 	margin-bottom: rem(10px);
@@ -26,13 +26,13 @@
 		height: 0;
 		width: 0;
 		border: 5px solid transparent;
-	//	border-top-color: $yellow;
+		border-top-color: $yellow;
 		border-bottom-width: 0px;
 		margin-right: rem(10px);
 	}
-	/*@include tablets {
+	@include tablets {
 		font-size: rem(24px);
-	}*/
+	}
 }
 
 .accordeon__item-content {
@@ -42,12 +42,12 @@
 	transition: .4s;
 	padding: 0 rem(15px);
 	margin: 0 auto;
-/*	@include laptop {
-		text-align: center;
-	}
+	//@include laptop {
+		//text-align: center;
+	//}
 	@include tablets {
 		width: 75%;
-	}*/
+	}
 }
 
 .accordeon__item-image {
@@ -78,12 +78,12 @@
 	vertical-align: top;
 	text-align: left;
 	padding: 0 rem(15px);
-/*	@include laptop {
-		width: 100%;
-	}
+	//@include laptop {
+	//	width: 100%;
+	//}
 	@include tablets {
 		text-align: center;
-	}*/
+	}
 }
 
 .accordeon__item-description-title {
@@ -98,7 +98,7 @@
 
 .accordeon__item--active {
 	.accordeon__trigger {
-	//	color: $yellow;
+		color: $yellow;
 		&:before {
 			transform: rotate(-180deg);
 		}

@@ -36,100 +36,7 @@ hamburgerMenu.addEventListener('click', function (e) {
 });
 
 
-//
-/* Horizontal Accordeon */
- let horizontalAccordeon = (function (options) {
- 	let list = document.querySelector('.'+options.list);
- 	let itemsList = list.querySelectorAll('.'+options.item);
-
- 	/* calculate needed width */
- 	let userWidth = window.innerWidth;
- 	let titleItem = list.querySelector('.'+options.link);
- 	let widthTitle = titleItem.clientWidth;
- 	let neededWidth = userWidth - itemsList.length * widthTitle;
- 	console.log(neededWidth);
- 	neededWidth = (neededWidth > 520) ? 520 : neededWidth;
-
- 	let _toogleItems = function (e) {
- 		e.preventDefault();
-
- 		if (e.target.className == options.link) {
- 			let item = e.target.parentNode;
- 			let contentItem = item.querySelector('.'+options.content);
-
- 			if (!item.classList.contains(options.activeItem)) {
- 				_closeItems(itemsList);
- 				_openItem(item, contentItem);
- 			} else {
- 				_closeItem(item, contentItem);
- 			}
- 		}
- 	};
-
- 	let _openItem = function _openItem(item, contentItem) {
- 		item.classList.toggle(options.activeItem);
- 		contentItem.style.width = neededWidth + 'px';
- 	};
-
- 	let _closeItem = function _closeItem(item, contentItem) {
- 		contentItem.style.width = '';
- 		item.classList.remove(options.activeItem);
- 	};
-
- 	let _closeItems = function _closeItems(items) {
- 		for (let i = 0; i < items.length; i++) {
- 			let contentItem = items[i].querySelector('.'+options.content);
- 			_closeItem(items[i], contentItem);
- 		}
- 	};
-
- 	let addListeners = function () {
- 		list.addEventListener('click', _toogleItems)
- 	};
-
- 	return {
- 		init: addListeners
- 	}
- })({
- 	list: "menu-acco",
- 	item: "menu-acco__item",
- 	activeItem: "menu-acco__item--active",
- 	link: "menu-acco__trigger",
- 	content: "menu-acco__content"
- });
-
- horizontalAccordeon.init();
-
-// Vertical Accordeon 
-
-let acco = document.querySelector('#acco');
-
-acco.addEventListener('click', function (e) {
-	e.preventDefault();
-	let target = e.target;
-	let currentTarget = target.nextElementSibling;
-
-	function clear() {
-		let activeContent = document.querySelector('.team-acco__item.active'); //.team-acco__content.active
-		if (activeContent) {
-			activeContent.classList.remove('active');
-		}
-	}
-
-	if (target.classList.contains('team-acco__trigger')) {
-		if (currentTarget.classList.contains('active')) {
-			currentTarget.classList.remove('active');
-		} else {
-			clear();
-			currentTarget.classList.add('active');
-		}
-	}
-})
-
-
-
-
-/* popup */
+// popup 
 let popup = options => {
 	let wrapper = document.querySelector('.' + options.wrapper);
 
@@ -207,152 +114,7 @@ popup({
 	text: "review__shorttext"
 }).init();
 
-
-/* slider */
 /*
-let slider = options => {
-  let container = document.querySelector('.' + options.container);
-  let widthWrapper = container.clientWidth;
-
-	let wrapper = document.querySelector('.'+options.wrapper);
-	wrapper.style.width = widthWrapper  + 'px';
-
-	let list = document.querySelector('.'+options.list);
-	let items = document.querySelectorAll('.'+options.item);
-
-	let left = document.querySelector('.'+options.prev);
-	let right = document.querySelector('.'+options.next);
-
-	items.forEach(element => {
-		element.style.width = widthWrapper  + 'px';
-	});
-
-	let minRight = 0;
-	let maxRight = widthWrapper * (items.length - 1);
-	let step = widthWrapper;
-	let currentRight = 0;
-
-	let _slideRight = value => {
-		if (value <= maxRight) {
-			currentRight += step;
-			list.style.right = currentRight + "px";
-		}
-	};
-
-	let _slideLeft = value => {
-		if (value >= minRight) {
-			currentRight -= step;
-			list.style.right = currentRight + "px";
-		}
-	};
-
-	let initial = () => {
-		list.style.right = currentRight;
-
-		right.addEventListener("click", e => {
-			e.preventDefault();
-
-			_slideRight(currentRight + step);
-		});
-
-		left.addEventListener("click", e => {
-			e.preventDefault();
-
-			_slideLeft(currentRight - step);
-		});
-
-		window.addEventListener("resize", () => {
-      widthWrapper = container.clientWidth;
-      wrapper.style.width = widthWrapper  + 'px';
-
-      items.forEach(element => {
-        element.style.width = widthWrapper  + 'px';
-      });
-    });
-
-		_swipeDetected(wrapper);
-	};
-
-	let _swipeDetected = element => {
-		let startX,
-			startY,
-			distX,
-			distY,
-			deviation = 200, //deviation from main direction
-			threshold = 150, //min range for swipe
-			allowedTime = 1000, //max time for range
-			elapsedTime, //runtime
-			startTime;
-
-		element.addEventListener('touchstart', e => {
-			let touchobj = e.changedTouches[0];
-			startX = touchobj.pageX;
-			startY = touchobj.pageY;
-			startTime = new Date().getTime(); //time touch with sensor
-		});
-
-		//disable touchmove
-		element.addEventListener('touchmove', e => e.preventDefault());
-
-		element.addEventListener('touchend', e => {
-			let touchobj = e.changedTouches[0];
-			distX = touchobj.pageX - startX; //get horizontal move
-			distY = touchobj.pageY - startY; //get vertical move
-			elapsedTime = new Date().getTime() - startTime;
-			if (elapsedTime <= allowedTime) {
-				if (Math.abs(distX) >= threshold && Math.abs(distY) <= deviation) { //horizontal swipe
-					swipedir = (distX < 0) ? _slideRight(currentRight + step) : _slideLeft(currentRight - step)
-				}
-			}
-		});
-	};
-
-	let _mobileIngredients = () => {
-		let btnIngredients = document.querySelector('.burger__ingredients');
-		let btnCloseIngredients = document.querySelector('.dropdown__close');
-
-		btnCloseIngredients.addEventListener('click', e => {
-			e.preventDefault();
-
-			btnIngredients.classList.remove('active');
-		});
-		btnCloseIngredients.addEventListener('touchstart', e => {
-			e.preventDefault();
-
-			btnIngredients.classList.remove('active');
-		});
-
-		if (checkMobile) {
-			btnIngredients.addEventListener('click', e => {
-				e.preventDefault();
-				btnIngredients.classList.add("active");
-			});
-		}
-		btnIngredients.addEventListener('mouseenter', () => {
-			btnIngredients.classList.add("active");
-		});
-
-		btnIngredients.addEventListener('mouseleave', () => {
-			btnIngredients.classList.remove("active");
-		});
-	};
-	_mobileIngredients();
-
-	return {
-		init: initial
-	}
-};
-
-slider({
-  container: 'burger',
-	wrapper: 'burger__wrapper',
-	list: 'burger__list',
-	item: 'burger__item',
-	next: 'burger__controls-link--next',
-	prev: 'burger__controls-link--prev'
-}).init();
-*/
-
 //Слайдер
 
 $(document).ready(function(){
@@ -410,14 +172,7 @@ $(document).ready(function(){
 	});
 
 });
-
-
-
-
-
-
-
-
+*/
 // popup form
 
 
@@ -467,124 +222,6 @@ return {
 	}
 };
 }
-/* form order */
-/*
-const formOrder = $("#order-form");
-const formReset = $(".order__form-button_reset");
-formOrder.on('submit', function(e){
-		e.preventDefault();
-
-		let result = $.ajax(formOrder.attr('action'), {
-			type: formOrder.attr('method'),
-			data: $(this).serialize(),
-			dataType: 'JSON'
-		});
-
-		result.done(function () {
-			formReset.trigger('click');
-		});
-
-		result.fail(function (data) {
-			console.log(data);
-		});
-
-		result.always(function (data) {
-			let answer = openOverlay({
-				classContainer: 'form__answer',
-				classTitle: 'form__answer-title',
-				classClose: 'form__answer_close',
-				content: data.msg
-			});
-
-			document.body.appendChild(answer);
-		})
-	});
-
-var openOverlay = options => {
-	const overlayElement = document.createElement("div");
-	overlayElement.classList.add("overlay");
-
-	const containerElement = document.createElement("div");
-	containerElement.classList.add(options.classContainer);
-
-	const contentElement = document.createElement("div");
-	contentElement.classList.add(options.classTitle);
-	contentElement.textContent = options.content;
-//	contentElement.textContent = "Сообщение отправлено";
-
-
-	const closeElement = document.createElement("button");
-	closeElement.classList.add(options.classClose);
-	closeElement.classList.add('order-link');
-	closeElement.textContent = "Закрыть";
-	closeElement.addEventListener("click", function() {
-		document.body.removeChild(overlayElement);
-	});
-
-	overlayElement.appendChild(containerElement);
-	containerElement.appendChild(contentElement);
-	containerElement.appendChild(closeElement);
-
-	return overlayElement;
-};
-
-*/
-
-/*
-const myForm = document.querySelector('#order-form');
-const sendButton = document.querySelector('#sendButton');
-
-sendButton.addEventListener('click', function(event) {
-event.preventDefault();
-
-//console.log(myForm.elements.name.value);
-//console.log(myForm.elements.phone.value);
-//console.log(myForm.elements.comment.value);
-
-if (validateForm(myForm)) {
-	const data = {
-		name: myForm.elements.name.value,
-		phone: myForm.elements.phone.value,
-		comment: myForm.elements.comment.value
-	};
-	
-	const xhr = new XMLHttpRequest();
-	xhr.responseType = 'json';
-	xhr.open('POST', 'https://webdev-api.loftschool.com/sendmail/fail');
-	xhr.send(JSON.stringify(data));
-	xhr.addEventListener('load', () => {
-		if (xhr.response.status) {
-			console.log('все ок');
-		}
-	});
-}
-});
-
-
-function validateForm(form) {
-	let valid = true;
-
-	if (!validateField(form.elements.name)) {
-		valid = false;
-	}
-	if (!validateField(form.elements.phone)) {
-		valid = false;
-	}
-	if (!validateField(form.elements.comment)) {
-		valid = false;
-	}
-	return valid;
-}
-
-function validateField(field) {
-	field.nextElementSibling.textContent = field.validationMessage;
-	return field.checkValidity();	
-}*/
-
-// модальное 
-
-
-
 // Form
 
 
@@ -627,8 +264,146 @@ sendFormButton.addEventListener('click', function (e) {
 
 
 //Для меню
-let neededWidth = userWidth -  widthTitle;
+//let neededWidth = userWidth -  widthTitle;
 
 
-/* yandex map */
+let multiAcco = options => {
+	let list = document.querySelector('.' + options.list);
+	let itemsList = list.querySelectorAll('.' + options.item);
 
+	if (options.direction === "horizontal") {
+		/* for calculate needed width */
+		let userWidth = window.innerWidth;
+		let titleItem = list.querySelector('.' + options.link);
+		let widthTitle = titleItem.clientWidth;
+		var neededWidth = userWidth - itemsList.length * widthTitle;
+		neededWidth = (neededWidth > 520) ? '520px' : neededWidth + 'px';
+	} else if (options.direction === "vertical") {
+		/* for calculate needed height */
+		var _getHeight = elem => elem.scrollHeight + 'px';
+	}
+
+	let _toogleItems = e => {
+		e.preventDefault();
+
+		if (e.target.className === options.link) {
+			let item = e.target.parentNode;
+			let contentItem = item.querySelector('.' + options.content);
+
+			if (!item.classList.contains(options.activeItem)) {
+				_closeItems(itemsList);
+				_openItem(item, contentItem);
+			} else {
+				_closeItem(item, contentItem);
+			}
+		}
+	};
+
+	let _openItem = (item, contentItem) => {
+		if (options.direction === "horizontal") {
+			contentItem.style.width = neededWidth;
+		} else if (options.direction === "vertical") {
+			contentItem.style.height = _getHeight(contentItem);
+		}
+		item.classList.toggle(options.activeItem);
+	};
+
+	let _closeItem = (item, contentItem) => {
+		if (options.direction === "horizontal") {
+			contentItem.style.width = '';
+		} else if (options.direction === "vertical") {
+			contentItem.style.height = '';
+		}
+
+		item.classList.remove(options.activeItem);
+	};
+
+	let _closeItems = items => {
+		for (let i = 0; i < items.length; i++) {
+			let contentItem = items[i].querySelector('.' + options.content);
+			_closeItem(items[i], contentItem);
+		}
+	};
+
+	let addListeners = () => {
+		list.addEventListener('click', _toogleItems)
+	};
+
+	return {
+		init: addListeners
+	}
+};
+
+multiAcco({
+	direction: "horizontal",
+	list: "menu-accordeon__list",
+	item: "menu-accordeon__item",
+	activeItem: "menu-accordeon__item--active",
+	link: "menu-accordeon__trigger",
+	content: "menu-accordeon__item-content"
+}).init();
+
+multiAcco({
+	direction: "vertical",
+	list: "accordeon__list",
+	item: "accordeon__item",
+	activeItem: "accordeon__item--active",
+	link: "accordeon__trigger",
+	content: "accordeon__item-content"
+}).init();
+
+
+
+/* slider */
+
+$(function () {
+
+	var moveSlide = function (container, slideNum) {
+		var
+		
+		items = container.find('.burger__item'),
+		activeSlide = items.filter('.active'),
+		reqItem = items.eq(slideNum),
+		reqIndex = reqItem.index(),
+		list = container.find('.burger__list'),
+		duration = 250;
+
+	if (reqItem.length) {
+		list.animate({
+			'left' : -reqIndex * 100 + '%'
+		}, duration, function() {
+			activeSlide.removeClass('active');
+			reqItem.addClass('active');
+		});	
+	}		
+
+}
+
+	$('.burger__controls-link').on('click', function(e){
+		e.preventDefault();
+
+		var $this = $(this),
+				container = $this.closest('.burger'),
+				items =$('.burger__item', container),
+				activeItem = items.filter('.active'),
+				nextItem = activeItem.next(),
+				prevItem = activeItem.prev();
+		
+		if ($this.hasClass('burger__controls-link--next')) { //вперед
+
+			if (nextItem.length) {
+				moveSlide(container, nextItem.index());	
+			} else {
+				moveSlide(container, items.first().index());	
+			}
+	
+		} else { //назад
+
+			if (prevItem.length) {
+				moveSlide(container, prevItem.index());
+			} else {
+				moveSlide(container, items.last().index());
+			}			
+		}
+	});
+});

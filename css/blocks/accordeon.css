@@ -1,9 +1,9 @@
 .accordeon__item {
-  color: white;
+  color: #fff;
   margin-bottom: rem(30px);
   font-size: rem(14px);
   font-family: 'Ubuntu';
-  /*	@include tablets {
+  /*@include tablets {
 		margin-bottom: rem(20px);
 	}
 	@include phones {
@@ -11,7 +11,7 @@
 	}*/ }
 
 .accordeon__trigger {
-  color: white;
+  color: #fff;
   text-decoration: none;
   font-size: rem(14px);
   font-family: 'Gagalin';
@@ -40,10 +40,7 @@
   transition: .4s;
   padding: 0 rem(15px);
   margin: 0 auto;
-  /*	@include laptop {
-		text-align: center;
-	}
-	@include tablets {
+  /*@include tablets {
 		width: 75%;
 	}*/ }
 
@@ -74,10 +71,7 @@
   vertical-align: top;
   text-align: left;
   padding: 0 rem(15px);
-  /*	@include laptop {
-		width: 100%;
-	}
-	@include tablets {
+  /*@include tablets {
 		text-align: center;
 	}*/ }
 

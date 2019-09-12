@@ -3,6 +3,7 @@ $orange: #e45028;
 $yellow: #f9b43b;
 $black: #2f3234;
 $red: #e35028;
+$white: #fff;
 
 //normalize
 @import "_misc/normalize.scss";
@@ -26,12 +27,11 @@ $red: #e35028;
 @import "blocks/best.scss";
 @import "blocks/reviews.scss";
 @import "blocks/order.scss";
-//@import "blocks/form.scss";
 @import "blocks/fixed-menu.scss";
-@import "blocks/team.scss";
-@import "blocks/team-acco.scss";
+@import "blocks/accordeon.scss";
+@import "blocks/team-section.scss";
 @import "blocks/menu.scss";
-@import "blocks/menu-acco.scss";
+@import "blocks/menu-accordeon.scss";
 @import "blocks/map.scss";
 @import "blocks/footer.scss";
 @import "blocks/socials.scss";
@@ -40,3 +40,4 @@ $red: #e35028;
 @import "blocks/video.scss";
 @import "blocks/overlay.scss";
 @import "blocks/popup.scss";
+@import "blocks/player.scss";

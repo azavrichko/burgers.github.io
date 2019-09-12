@@ -1,11 +1,14 @@
-.menu {
-	background: url('../img/bg/menu-bg.jpg') no-repeat;
+.menu-section {
+	background-image: url('../img/bg/menu-bg.jpg');
+	background-repeat: no-repeat;
+	background-position: top;
 	background-size: cover;
 	position: relative;
-}
-
-.menu__title {
-	position: absolute;
-	top: 10%;
-	left: 10%;
+	text-align: left;
+	display: flex;
+	align-items: flex-start;
+	.section__title {
+		padding-top: 10%;
+		padding-left: 10%;
+	}
 }
