@@ -1,6 +1,9 @@
 .order {
   background: url('../img/bg/order.jpg') center center / cover no-repeat;
   color: #fff;
+  text-align: center;
+  display: flex;  
+  align-items: center;
 }
 .order__form {
   @extend %clearfix;
@@ -38,6 +41,7 @@
   @include ubuntu();
   color: #fff;
   font-size: rem(14px);
+  text-align: left;
   @include phones {
     margin-bottom: rem(5px);
   }

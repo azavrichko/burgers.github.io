@@ -21,25 +21,29 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   position: relative;
-  
+  touch-action: none;
  // color: $black;
+}
+.container {
+  width: 95%;
+  margin: 0 auto;
+  max-width: rem(940px);
+  display: flex;
+  flex-direction: column;
+  position: relative;
 }
 
 .wrapper {
   position: relative;
   width: 100%;
   //min-width: 940px + 20px;
-  min-height: 100%;
+  height: 100%;
   overflow: hidden;
 }
 
-.container {
-  width: 95%;
-  margin: 0 auto;
-  max-width: 940px;
-  display: flex;
-  flex-direction: column;
-  position: relative;
+.maincontent {
+  height: 100%;
+  transition: transform 1s;
 }
 
 h1,

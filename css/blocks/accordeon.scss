@@ -42,12 +42,10 @@
 	transition: .4s;
 	padding: 0 rem(15px);
 	margin: 0 auto;
-	//@include laptop {
-		//text-align: center;
-	//}
 	@include tablets {
 		width: 75%;
-	}
+		text-align: center;
+	}	
 }
 
 .accordeon__item-image {
@@ -78,10 +76,8 @@
 	vertical-align: top;
 	text-align: left;
 	padding: 0 rem(15px);
-	//@include laptop {
-	//	width: 100%;
-	//}
 	@include tablets {
+		width: 100%;
 		text-align: center;
 	}
 }
