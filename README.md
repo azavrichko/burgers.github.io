@@ -1,1 +1,1 @@
-# burgers.github.io
+# burgers.github.io/dist
