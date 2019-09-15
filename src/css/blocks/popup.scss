@@ -1,0 +1,57 @@
+.overlay_review {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #0005;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
+}
+
+.popup_review {  
+  max-width:95%;
+  position: absolute;
+  background-color: #fff;
+  font-family: Ubuntu,sans-serif;
+  font-weight: 300;
+  font-size: rem(14px);
+ // min-width: rem(460px);    
+  border-radius: rem(5px);
+  padding: rem(25px) rem(20px);    
+  top: 50%;
+  left: 50%;    
+  transform: translate(-50%,-50%);
+  z-index: 99999;
+}
+
+.popup__title {
+  position: relative;
+  font-family: Gagalin,sans-serif;
+  font-weight: 400;
+  margin-bottom: rem(20px);
+}
+
+.popup__content {
+  //width: rem(400px);
+  border-radius: rem(5px);  
+  color: #444;
+  font-size: rem(16px);
+  margin: 0;
+}
+
+.popup__close {
+  position: absolute;
+  text-decoration: none;
+  top: rem(20px);
+  right: rem(20px);
+  width: rem(25px);
+  height: rem(25px); 
+}
+.popup__close-picture {
+  width: rem(20px);
+  height: rem(20px);
+}
+

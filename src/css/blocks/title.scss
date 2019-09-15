@@ -1,0 +1,24 @@
+.title {
+  font-size: rem(72px);
+  @include gagalin;
+  color: $yellow;
+  margin-bottom: rem(55px);
+  line-height: 1;  
+
+  &--color {
+    &--black {
+      color: $black;
+    }
+
+    &--white {
+      color: white;
+    }
+  }
+  &--centered {
+    text-align: center;
+  }  
+  
+  @include phones {
+    font-size: 3.0625rem;  
+    }
+}

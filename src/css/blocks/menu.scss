@@ -1,0 +1,14 @@
+.menu-section {
+	background-image: url('../img/bg/menu-bg.jpg');
+	background-repeat: no-repeat;
+	background-position: top;
+	background-size: cover;
+	position: relative;
+	text-align: left;
+	display: flex;
+	align-items: flex-start;
+	.section__title {
+		padding-top: 10%;
+		padding-left: 10%;
+	}
+}

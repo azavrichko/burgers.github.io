@@ -1,0 +1,80 @@
+// colors
+$orange: #e45028;
+$yellow: #f9b43b;
+$black: #2f3234;
+$red: #e35028;
+$white: #fff;
+
+
+//центрирование элементов
+@mixin centered($pos: absolute, $axis: 'both') {
+  position: $pos;
+  @if ($axis=='both') {
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+  }
+  @if ($axis=='x') {
+      left: 50%;
+      transform: translateX(-50%);
+  }
+  @if ($axis=='y') {
+      top: 50%;
+      transform: translateY(-50%);
+  }
+  @if ($axis=='max') {
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+  }
+  @if ($axis=='fullX') {
+      right: 0;
+      left: 0;
+  }
+  @if ($axis=='fullY') {
+      top: 0;
+      bottom: 0;
+  }
+  @if ($axis=='default') {
+      left: 0;
+      top: 0;
+      transform: translate(0,0);
+  }
+}
+//normalize
+@import "_misc/normalize.scss";
+
+//setups
+@import "_misc/fonts.scss";
+@import "_misc/mixins.scss";
+@import "_misc/media.scss";
+@import "_misc/layout.scss";
+@import "_misc/animate.scss";
+
+
+//blocks
+@import "blocks/section.scss";
+@import "blocks/hero.scss";
+@import "blocks/header.scss";
+@import "blocks/nav.scss";
+@import "blocks/btn.scss";
+@import "blocks/title.scss";
+@import "blocks/scroll-down-btn.scss";
+@import "blocks/best.scss";
+@import "blocks/reviews.scss";
+@import "blocks/order.scss";
+@import "blocks/fixed-menu.scss";
+@import "blocks/accordeon.scss";
+@import "blocks/team-section.scss";
+@import "blocks/menu.scss";
+@import "blocks/menu-accordeon.scss";
+@import "blocks/map.scss";
+@import "blocks/footer.scss";
+@import "blocks/socials.scss";
+@import "blocks/hamburger.scss";
+@import "blocks/burgers.scss";
+@import "blocks/video.scss";
+@import "blocks/overlay.scss";
+@import "blocks/popup.scss";
+@import "blocks/player.scss";

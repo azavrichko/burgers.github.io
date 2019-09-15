@@ -1,0 +1,21 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: rem(12px);
+}
+
+.header__buttons {
+  display: flex;
+  align-items: center;
+  @include ubuntu();
+  font-weight: 500;
+
+  @include tablets {
+    margin-left: auto;
+  }
+}
+
+.logo__container {
+  max-width: 100%;
+}
