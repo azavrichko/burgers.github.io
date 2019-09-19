@@ -4692,7 +4692,7 @@ button {
   height: 1.25rem; }
 
 .player {
-  background: url("../../img/bg/video-bg.jpg") center center/cover no-repeat; }
+  background: url("../img/bg/video-bg.jpg") center center/cover no-repeat; }
 
 .player__wrap {
   display: -webkit-box;
