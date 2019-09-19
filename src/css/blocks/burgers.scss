@@ -232,6 +232,9 @@
     width: rem(320px);
     padding-right: rem(40px);
   }
+  @include phones {
+    width: auto;
+  }
 }
 
 .dropdown__list {

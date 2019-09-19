@@ -2,6 +2,10 @@
   position: relative;
   top: 50%;
   transform: translateY(-50%);
+
+  @include phones {
+    transform: translateY(0);
+  }
 }
 .socials__item {
   display: inline-block;

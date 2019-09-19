@@ -3,9 +3,12 @@
 	top: rem(90px);
 	right: rem(40px);
 
-//	@include laptop {
-//		display: none;
-//	}
+	@include tablets {
+		display: none;
+	}
+	@include phones {
+		display: none;
+	}
 }
 
 .fixed-menu__link {
