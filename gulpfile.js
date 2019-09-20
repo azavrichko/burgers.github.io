@@ -49,6 +49,8 @@ task('copy', () => {
  })
 
 
+ 
+
 task('styles', () => {
  return src([...STYLE_LIBS, 'src/css/main.scss'])
    .pipe(gulpif(env === 'dev', sourcemaps.init()))
@@ -136,4 +138,5 @@ task('build',
    'clean',
    parallel('copy:html', 'styles', 'scripts', 'copy'))
 );
+
 
