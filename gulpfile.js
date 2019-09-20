@@ -137,14 +137,3 @@ task('build',
    parallel('copy:html', 'styles', 'scripts', 'copy'))
 );
 
-$(function() {
-  $("body").swipe( {
-    //Generic swipe handler for all directions
-    swipe:function(event, direction, distance, duration, fingerCount, fingerData) {
-      $(this).text("You swiped " + direction );  
-    }
-  });
- 
-  //Set some options later
-  $("#body").swipe( {fingers:2} );
-});
