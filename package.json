@@ -29,7 +29,7 @@
     "gulp-svgo": "^2.1.1",
     "gulp-uglify": "^3.0.2",
     "jquery-touchswipe": "^1.6.19",
-    "node-sass": "^4.12.0",
+    "node-sass": "^4.13.1",
     "webpack": "^4.40.2",
     "webpack-cli": "^3.3.8"
   },
